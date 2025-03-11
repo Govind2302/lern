@@ -26,7 +26,7 @@ export const SidebarRoutes = () => {
                 key={route.href}
                 icon={route.icon}
                 label={route.label}
-                href={route.href}
+                herf={route.href}
                 />
             )
             }
