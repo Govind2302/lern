@@ -5,6 +5,7 @@ import axios from "axios";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { useRouter } from "next/navigation";
+import { Toast, Toaster } from "react-hot-toast";
 
 import {
 Form,
@@ -43,7 +44,7 @@ const CreatePage = () => {
             const response = await axios.post("/api/course", values);
             router.push('/teacher/courses/${response.data.id}');
         } catch {
-            toast
+            toast.error("Something went wrong");
         }
     }
 
